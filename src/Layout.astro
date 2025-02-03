@@ -1,10 +1,6 @@
 ---
 import "./base.css";
-import { execSync } from "child_process";
 import Back from "./Back.astro";
-import { formatDate } from "./util.js";
-
-const hash = execSync("git rev-parse --short HEAD").toString();
 
 const { title } = Astro.props;
 ---
@@ -33,16 +29,8 @@ const { title } = Astro.props;
         {title && <Back href="/" color="text-blue" label="home" />}
       </div>
       <footer class="text-xs text-subtext0 mt-2">
-        <span>theme: <button id="themeToggle" class="underline">system</button></span><button
-          id="catToggle"
-          class="underline ml-2"></button>
-        <p>
-          commit {hash} on {formatDate(new Date())} with {Astro.generator}<span class="float-right"
-            ><span id="emoji" class="select-none inline-block transition-transform hover:scale-150">❤️</span> chxry {
-              new Date().getFullYear()
-            }</span
-          >
-        </p>
+        theme: <button id="themeToggle" class="underline">system</button><button id="catToggle" class="underline ml-2"
+        ></button>
       </footer>
     </main>
     <script src="./index.js"></script>

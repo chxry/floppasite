@@ -1,6 +1,10 @@
 ---
+import { execSync } from "child_process";
 import Layout from "../Layout.astro";
 import Button from "../Button.astro";
+import { formatDate } from "../util.js";
+
+const hash = execSync("git rev-parse --short HEAD").toString();
 ---
 
 <Layout>
@@ -29,6 +33,7 @@ import Button from "../Button.astro";
     <Button href="https://moonlight-mod.github.io" src="/moonlight.gif" />
     <Button href="https://rust-lang.org" src="/rust.png" />
     <Button href="https://artixlinux.org" src="/artix.gif" />
+    <Button href="https://nixos.org" src="/nixos.png" />
     <Button
       href="https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish"
       src="/hatems.gif"
@@ -36,9 +41,13 @@ import Button from "../Button.astro";
     />
     <Button href="https://ublockorigin.com" src="/ublock.png" />
     <Button href="https://blender.org" src="/blender.gif" />
+    <Button href="https://vocaloid.com" src="/vocaloid.png" />
     <Button src="/torrent.gif" alt="seed your torrents!" />
     <Button src="/nft.gif" alt="this is an anti-nft site" />
     <Button src="/rights.gif" alt="trans rights now!" />
     <Button href="https://wikipedia.org" src="/wikipedia.gif" />
   </div>
+  <p class="text-xs text-subtext0 mt-2">
+    commit {hash} on {formatDate(new Date())} with {Astro.generator}
+  </p>
 </Layout>

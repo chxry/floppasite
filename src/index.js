@@ -85,8 +85,3 @@ window.addEventListener("popstate", () => {
     swapContent(url);
   }
 });
-
-document.getElementById("emoji").addEventListener("mouseover", (event) => {
-  const emojis = ["❤️", "🩷", "💜", "🎀", "✨", "🌸", "💕", "🌷", "🌺", "💝"];
-  event.target.innerText = emojis[Math.floor(Math.random() * emojis.length)];
-});
