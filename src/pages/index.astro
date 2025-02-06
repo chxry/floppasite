@@ -1,10 +1,10 @@
 ---
-import { execSync } from "child_process";
+// import { execSync } from "child_process";
 import Layout from "../Layout.astro";
 import Button from "../Button.astro";
-import { formatDate } from "../util.js";
+// import { formatDate } from "../util.js";
 
-const hash = execSync("git rev-parse --short HEAD").toString();
+// const hash = execSync("git rev-parse --short HEAD").toString();
 ---
 
 <Layout>
@@ -47,7 +47,7 @@ const hash = execSync("git rev-parse --short HEAD").toString();
     <Button src="/rights.gif" alt="trans rights now!" />
     <Button href="https://wikipedia.org" src="/wikipedia.gif" />
   </div>
-  <p class="text-xs text-subtext0 mt-2">
-    commit {hash} on {formatDate(new Date())} with {Astro.generator}
-  </p>
+  <!-- <p class="text-xs text-subtext0 mt-2"> -->
+    <!-- commit {hash} on {formatDate(new Date())} with {Astro.generator} -->
+  <!-- </p> -->
 </Layout>
