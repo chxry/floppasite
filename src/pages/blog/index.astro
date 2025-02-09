@@ -12,7 +12,7 @@ posts.sort((a, b) => b.data.date - a.data.date);
   {
     posts.map((post) => (
       <div>
-        <a href={"/blog/" + post.slug} class="text-xl underline">
+        <a href={"/blog/" + post.slug} class="text-xl underline font-bold">
           {post.data.title}
         </a>
         <p class="text-subtext0">
