@@ -1,6 +1,6 @@
 {
-  "name": "chxry.github.io",
-  "version": "2.2.0",
+  "name": "floppa site",
+  "version": "2.3.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "prettier": "prettier --write src"
   },
   "dependencies": {
+    "@astrojs/markdown-remark": "^6.1.0",
     "@astrojs/tailwind": "^5.1.5",
     "@catppuccin/tailwindcss": "^0.1.6",
     "astro": "5.1.3",
