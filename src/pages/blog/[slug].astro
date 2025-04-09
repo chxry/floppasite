@@ -16,7 +16,7 @@ const { Content } = await post.render();
 ---
 
 <Layout title={post.data.title}>
-  <p class="text-subtext0">{post.data.description} - {formatDate(post.data.date)}</p>
+  <p class="text-subtext0">{formatDate(post.data.date)} - {post.data.description}</p>
   <article class="blog">
     <hr />
     <Content />

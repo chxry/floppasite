@@ -15,8 +15,8 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
   <body class="system bg-dots text-text font-inter md:text-[1rem] md:leading-6 relative md:text-lg">
-    <main class="max-w-[52rem] mx-auto p-2 md:pt-9 min-h-dvh flex flex-col">
-      <h1 class="font-extrabold text-5xl md:text-7xl mb-2 font-poppins font-boldr">
+    <main class="max-w-[52rem] mx-auto p-3 md:pt-9 min-h-dvh flex flex-col">
+      <h1 class="font-extrabold text-5xl md:text-7xl my-2 font-poppins font-boldr">
         <img
           class="inline w-[1em] h-[1em] mr-2 rounded-sm transition-transform hover:rotate-3 select-none"
           src="/icon.png"
@@ -24,7 +24,7 @@ const { title } = Astro.props;
         />chxry
       </h1>
       <div id="content" class="flex-1">
-        {title && <h1 class="text-3xl font-bold font-poppins">{title}:</h1>}
+        {title && <h1 class="text-3xl font-bold font-poppins my-2">{title}:</h1>}
         <slot />
         {title && <Back href="/" color="text-blue" label="home" />}
       </div>

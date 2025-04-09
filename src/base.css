@@ -17,7 +17,7 @@
     background-image: radial-gradient(rgb(var(--ctp-surface2)) 1px, transparent 0);
     background-size: 40px 40px;
     @media not prefers-reduced-motion {
-      animation-name: move;
+      animation-name: bg-anim;
       animation-duration: 4s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
@@ -47,17 +47,17 @@
   .blog {
     h1,
     h2 {
-      @apply text-3xl mb-2;
+      @apply text-3xl;
     }
 
     h3,
     h4 {
-      @apply text-2xl mb-1;
+      @apply text-2xl;
     }
 
     h5,
     h6 {
-      @apply text-xl mb-0.5;
+      @apply text-xl;
     }
 
     h1,
@@ -66,7 +66,7 @@
     h4,
     h5,
     h6 {
-      @apply font-bold;
+      @apply font-bold my-2;
     }
 
     h1 a,
@@ -79,7 +79,7 @@
     }
 
     p {
-      @apply mb-2;
+      @apply my-1;
     }
 
     ul {
@@ -95,7 +95,7 @@
     }
 
     hr {
-      @apply my-2 border-t-2 border-overlay2;
+      @apply my-2 border-t border-overlay2;
     }
 
     blockquote {
@@ -118,9 +118,13 @@
     pre {
       @apply p-2 my-2;
     }
+
+    li {
+      @apply my-1;
+    }
   }
 
-  @keyframes move {
+  @keyframes bg-anim {
     from {
       background-position: 0px 0px;
     }
