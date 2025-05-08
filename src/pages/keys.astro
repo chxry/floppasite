@@ -1,0 +1,26 @@
+---
+import Layout from "../Layout.astro";
+import ssh from "../../public/id_floppa.pub?raw";
+import pgp from "../../public/floppa.asc?raw";
+
+const keys = [
+  { name: "ssh", path: "/id_floppa.pub", raw: ssh },
+  { name: "pgp", path: "/floppa.asc", raw: pgp },
+];
+---
+
+<Layout title="keys">
+  {
+    keys.map(({ name, path, raw }) => (
+      <div class="my-1">
+        <h2 class="text-lg">
+          {name}:
+          <a class="underline text-lavender" href={path} data-noprefetch>
+            raw
+          </a>
+        </h2>
+        <pre class="text-xs text-subtext0 font-jetbrains">{raw}</pre>
+      </div>
+    ))
+  }
+</Layout>

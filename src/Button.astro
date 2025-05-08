@@ -1,0 +1,13 @@
+---
+let { src, href, alt } = Astro.props;
+---
+
+{
+  href ? (
+    <a {href}>
+      <img class="btn" {src} {alt} />
+    </a>
+  ) : (
+    <img class="btn" {src} {alt} />
+  )
+}

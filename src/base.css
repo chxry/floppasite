@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:wght@700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    width: 88px;
+    height: 31px;
+    @apply mt-1 md:mr-2 md:mt-2;
+  }
+
+  .bg-dots {
+    background: rgb(var(--ctp-base));
+    background-image: radial-gradient(rgb(var(--ctp-surface2)) 1px, transparent 0);
+    background-size: 40px 40px;
+    @media not prefers-reduced-motion {
+      animation-name: bg-anim;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  }
+
+  .system {
+    @apply latte dark:mocha;
+    @media (prefers-color-scheme: dark) {
+      code span {
+        color: var(--shiki-dark) !important;
+      }
+    }
+  }
+
+  .light {
+    @apply latte;
+  }
+
+  .dark {
+    @apply mocha;
+    code span {
+      color: var(--shiki-dark) !important;
+    }
+  }
+
+  .blog {
+    h1,
+    h2 {
+      @apply text-3xl;
+    }
+
+    h3,
+    h4 {
+      @apply text-2xl;
+    }
+
+    h5,
+    h6 {
+      @apply text-xl;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply font-bold my-2;
+    }
+
+    h1 a,
+    h2 a,
+    h3 a,
+    h4 a,
+    h5 a,
+    h6 a {
+      @apply no-underline mr-2;
+    }
+
+    p {
+      @apply my-1;
+    }
+
+    ul {
+      @apply list-disc list-inside;
+    }
+
+    ol {
+      @apply list-decimal list-inside;
+    }
+
+    a {
+      @apply underline text-lavender;
+    }
+
+    hr {
+      @apply my-2 border-t border-overlay2;
+    }
+
+    blockquote {
+      @apply border-l-4 border-overlay2 text-overlay2 my-4 pl-4;
+    }
+
+    code,
+    pre {
+      @apply text-subtext0 !bg-mantle rounded-md text-sm font-jetbrains;
+    }
+
+    :not(pre) code {
+      @apply p-1;
+    }
+
+    code span:empty {
+      @apply hidden;
+    }
+
+    pre {
+      @apply p-2 my-2;
+    }
+
+    li {
+      @apply my-1;
+    }
+  }
+
+  @keyframes bg-anim {
+    from {
+      background-position: 0px 0px;
+    }
+    to {
+      background-position: 40px 40px;
+    }
+  }
+}

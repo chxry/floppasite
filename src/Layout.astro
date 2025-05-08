@@ -1,0 +1,38 @@
+---
+import "./base.css";
+import Back from "./Back.astro";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title ? `${title} - chxry` : "chxry"}</title>
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="system bg-dots text-text font-inter md:text-[1rem] md:leading-6 relative md:text-lg">
+    <main class="max-w-[52rem] mx-auto p-3 md:pt-9 min-h-dvh flex flex-col">
+      <h1 class="font-extrabold text-5xl md:text-7xl my-2 font-poppins font-boldr">
+        <img
+          class="inline w-[1em] h-[1em] mr-2 rounded-sm transition-transform hover:rotate-3 select-none"
+          src="/icon.png"
+          alt="hu tao"
+        />chxry
+      </h1>
+      <div id="content" class="flex-1">
+        {title && <h1 class="text-3xl font-bold font-poppins my-2">{title}:</h1>}
+        <slot />
+        {title && <Back href="/" color="text-blue" label="home" />}
+      </div>
+      <footer class="text-xs text-subtext0 mt-2">
+        theme: <button id="themeToggle" class="underline">system</button><button id="catToggle" class="underline ml-2"
+        ></button>
+      </footer>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

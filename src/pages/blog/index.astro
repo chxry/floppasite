@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../Layout.astro";
+import { formatDate } from "../../util.js";
+
+const posts = (await getCollection("posts")).filter((p) => !p.data.hidden);
+posts.sort((a, b) => b.data.date - a.data.date);
+---
+
+<Layout title="blog">
+  <p>i probably won't write anything here.</p>
+  {
+    posts.map((post) => (
+      <>
+        <div class="my-1">
+          <a href={"/blog/" + post.slug} class="text-xl underline font-bold">
+            {post.data.title}
+          </a>
+          <p class="text-subtext0">
+            {formatDate(post.data.date)} - {post.data.description}
+          </p>
+        </div>
+      </>
+    ))
+  }
+</Layout>

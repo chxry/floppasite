@@ -1,0 +1,60 @@
+---
+// import { execSync } from "child_process";
+import Layout from "../Layout.astro";
+import Button from "../Button.astro";
+// import { formatDate } from "../util.js";
+
+// const hash = execSync("git rev-parse --short HEAD").toString();
+---
+
+<Layout>
+  <div class="my-1 space-y-1">
+    <p>my name is alex and i like to program computers.</p>
+    <p>
+      i write code in rust whenever i have the choice, but also will use c and javascript when necessary. if i have no
+      other options i also somewhat know c#, c++, java and go.
+    </p>
+    <p>i use macos/artix linux with sway, alacritty and helix. i also run my personal server using nixos.</p>
+  </div>
+  <div class="my-1 space-x-2 *:underline font-bold text-lg md:text-xl">
+    <a class="text-red" href="/blog">blog</a>
+    <a class="text-peach" href="/keys">keys</a>
+    <a class="text-yellow" href="https://github.com/chxry">github</a>
+    <a class="text-green" href="https://discord.com/users/402534581695283200">discord</a>
+    <a class="text-blue" href="https://tech.lgbt/@floppa" rel="me">fedi</a>
+    <a class="text-mauve" href="mailto:floppa9@proton.me">email</a>
+  </div>
+  <div class="flex flex-wrap mt-1">
+    <Button href="/" src="/chxry.gif" />
+    <Button href="https://slonk.ing" src="/slonk.gif" />
+    <Button href="https://fxo.lol" src="/pndrs.png" />
+    <Button href="https://eightyeightthirty.one" src="/8831.png" />
+    <Button src="/queer.gif" alt="queer pride" />
+    <Button src="/enby.gif" alt="non-binary pride" />
+    <Button href="https://helix-editor.com" src="/helix.png" />
+    <Button href="https://catppuccin.com" src="/cat.png" />
+    <Button href="https://astro.build" src="/astro.png" />
+    <Button href="https://mozilla.org/firefox" src="/firefox.gif" />
+    <Button href="https://moonlight-mod.github.io" src="/moonlight.gif" />
+    <Button href="https://rust-lang.org" src="/rust.png" />
+    <Button href="https://artixlinux.org" src="/artix.gif" />
+    <Button href="https://nixos.org" src="/nixos.png" />
+    <Button href="https://caddyserver.com" src="/caddy.png" />
+    <Button href="https://matrix.org" src="/matrix.png" />
+    <Button
+      href="https://en.wikipedia.org/wiki/Embrace,_extend,_and_extinguish"
+      src="/hatems.gif"
+      alt="i hate microsoft"
+    />
+    <Button href="https://ublockorigin.com" src="/ublock.png" />
+    <Button href="https://blender.org" src="/blender.gif" />
+    <Button href="https://vocaloid.com" src="/vocaloid.png" />
+    <Button src="/torrent.gif" alt="seed your torrents!" />
+    <Button src="/nft.gif" alt="this is an anti-nft site" />
+    <Button src="/rights.gif" alt="trans rights now!" />
+    <Button href="https://wikipedia.org" src="/wikipedia.gif" />
+  </div>
+  <!-- <p class="text-xs text-subtext0 mt-2"> -->
+  <!-- commit {hash} on {formatDate(new Date())} with {Astro.generator} -->
+  <!-- </p> -->
+</Layout>
